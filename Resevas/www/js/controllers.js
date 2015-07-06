@@ -12,17 +12,8 @@ angular.module('starter.controllers', [])
   //});
   
   $scope.parques = Parques.all();
-  $scope.remove = function(parque) {
-    Parques.remove(parque);
-  }
 })
 
 .controller('ParqueDetailCtrl', function($scope, $stateParams, Parques) {
-  $scope.chat = Parques.get($stateParams.parqueId);
-})
-
-.controller('AccountCtrl', function($scope) {
-  $scope.settings = {
-    enableFriends: true
-  };
+  $scope.parque = Parques.get($stateParams.parqueId);
 });

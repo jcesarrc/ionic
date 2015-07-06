@@ -4,11 +4,50 @@
   The FriendsCtrl pulls data from the Friends service (service.js)
   The Friends service returns an array of friend data
 -->
-<ion-view view-title="{{chat.name}}">
-  <ion-content class="padding">
-    <img ng-src="{{chat.face}}" style="width: 64px; height: 64px">
-    <p>
-      {{chat.lastText}}
-    </p>
+<ion-view view-title="{{parque.name}}" >
+<div class="bar bar-header bar-balanced">
+  <h1 class="title">{{parque.name}}</h1>
+</div>
+  <ion-content class="padding has-header">
+    
+    <div class="list card">
+
+      <div class="item item-body centered">
+        <p>
+        <img ng-src="{{parque.image}}">
+        </p>
+        <div class="row">
+          <div class="col">
+              <p>
+                <img ng-src="{{parque.ficha}}">
+              </p>
+          </div>
+          <div class="col">
+              <p style="text-align: left;">
+                {{parque.desc}}
+              </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item" href="{{parque.url}}">
+          <i class="icon ion-ios-world"></i>
+          Web
+        </a>
+        <a ng-hide="{{parque.gview.length==0}}" class="tab-item" href="#">
+          <i class="icon ion-paper-airplane"></i>
+          Recorrido virtual
+        </a>
+        <a class="tab-item" href="{{parque.url}}">
+          <i class="icon ion-calendar"></i>
+          Reservar
+        </a>
+      </div>
+
+    </div>
+
+
+
   </ion-content>
 </ion-view>
