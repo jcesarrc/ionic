@@ -1,0 +1,23 @@
+<ion-view view-title="Parques">
+  <div class="bar bar-header bar-balanced">
+    <h1 class="title">Listado de Parques</h1>
+  </div>
+
+  <ion-content class='has-header'>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="Buscar">
+      </label>
+    </div>
+    <ion-list>
+      <ion-item class="item item-thumbnail-left" ng-repeat="parque in parques" 
+      type="item-text-wrap" href="#/tab/parques/{{parque.id}}">
+        <img ng-src="{{parque.image}}">
+        <h2>{{parque.name}}</h2>
+        <p>{{parque.desc}}</p>
+        <i class="icon ion-chevron-right"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

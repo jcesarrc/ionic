@@ -1,0 +1,8 @@
+{
+  "name": "Resevas",
+  "app_id": "21b87470",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ]
+}
