@@ -1,12 +1,19 @@
-/* Empty. Add your own CSS if you like */
-img#logoparques{
-	width: 40%;
-	display:block;
-    margin:auto;
-}
-
 .centered{
 	text-align: center;
+}
+
+.fichatecnica{
+	width: 90%;
+}
+
+.imagenparque{
+	width: 95%;
+}
+
+#logoparques{
+	width: 40%;
+	display:block;
+    margin: 0 auto;
 }
 
 .mytitle{
@@ -17,7 +24,22 @@ img#logoparques{
 	background: #d7d9a8;
 }
 
+
 video#bgvid {
+position: fixed;
+top: 50%;
+left: 50%;
+min-width: 100%;
+min-height: 100%;
+width: auto;
+height: auto;
+-webkit-transform: translateX(-50%) translateY(-50%);
+transform: translateX(-50%) translateY(-50%);
+background-size: cover;
+opacity: 0.8;
+}
+
+video#bgvid-original {
 position: fixed;
 top: 50%;
 left: 50%;
