@@ -2,20 +2,16 @@
   <div class="bar bar-header item-input-inset">
     <label class="item-input-wrapper">
     <i class="icon ion-ios-search placeholder-icon"></i>
-    <input type="search" placeholder="Buscar">
+    <input ng-model="search.name" type="search" placeholder="Buscar">
     </label>
-    <button class="button button-clear">
-      Cancelar
-    </button>
   </div>
 
   <ion-content class='has-header'>
     <ion-list>
-      <ion-item class="item item-thumbnail-left" ng-repeat="parque in parques" 
+      <ion-item class="item item-thumbnail-left" ng-repeat="parque in parques | filter: search" 
       type="item-text-wrap" href="#/tab/parque/{{parque.id}}">
         <img ng-src="{{parque.image}}">
         <h2>{{parque.name}}</h2>
-        
       </ion-item>
     </ion-list>
   </ion-content>

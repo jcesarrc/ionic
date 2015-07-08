@@ -60,7 +60,7 @@ angular.module('starter.services', [])
     url:    'http://www.parquesnacionales.gov.co/portal/es/ecoturismo/region-caribe/parque-nacional-natural-tayrona/',
     ficha:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/06/tayrona.jpg',
     image:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/06/Aviatur.jpg',
-    gview:  'https://www.google.com/maps/views/u/0/view/streetview/colombia-highlights/tayrona-national-natural-park-1/',
+    gview:  'http://www.google.com/maps/views/u/0/view/streetview/colombia-highlights/tayrona-national-natural-park-1/',
   },{
     id: 4,
     region: 'CRB',

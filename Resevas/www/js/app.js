@@ -83,6 +83,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         templateUrl: 'templates/tab-contacto.html'
       }
     }
+  })
+
+  .state('tab.reserva', {
+    url: '/reserva/:parqueId',
+    views: {
+      'tab-parques': {
+        templateUrl: 'templates/tab-reserva.html',
+        controller: 'ReservaCtrl'
+      }
+    }
   });
 
   // if none of the above states are matched, use this as the fallback

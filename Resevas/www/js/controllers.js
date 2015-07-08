@@ -10,10 +10,13 @@ angular.module('starter.controllers', [])
   //
   //$scope.$on('$ionicView.enter', function(e) {
   //});
-  
   $scope.parques = Parques.all();
 })
 
 .controller('ParqueDetailCtrl', function($scope, $stateParams, Parques) {
+  $scope.parque = Parques.get($stateParams.parqueId);
+})
+
+.controller('ReservaCtrl', function($scope, $stateParams, Parques) {
   $scope.parque = Parques.get($stateParams.parqueId);
 });

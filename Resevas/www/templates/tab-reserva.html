@@ -1,0 +1,49 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="Reservar" >
+<div class="bar bar-header bar-balanced">
+  <h1 class="title">Reservar</h1>
+</div>
+  <ion-content class="has-header">
+    
+    <div class="list card">
+      <div class="item item-divider">{{parque.name}}</div>
+      <div class="item item-body">
+          <div class="list">
+            <label class="item item-input item-stacked-label">
+              <span class="input-label">Nombre</span>
+              <input type="text" placeholder="Nombre">
+            </label>
+            <label class="item item-input item-stacked-label">
+              <span class="input-label">Correo electronico</span>
+              <input type="email" placeholder="Correo electrónico">
+            </label>
+            <label class="item item-input item-stacked-label">
+              <span class="input-label">Desde</span>
+              <input type="date" placeholder="Desde">
+            </label>
+            <label class="item item-input item-stacked-label">
+              <span class="input-label">Hasta</span>
+              <input type="date" placeholder="Hasta">
+            </label>
+            <label class="item item-input item-stacked-label">
+              <span class="input-label">Mensaje</span>
+              <textarea rows="4"></textarea>
+            </label><br><br>
+            <div class="centered">
+              <button class="button button-balanced pull-right">
+                <i class="icon ion-email"> &nbsp;Enviar</i>
+              </button>
+            </div>
+          </div>
+      </div>
+    </div>
+
+
+
+  </ion-content>
+</ion-view>
