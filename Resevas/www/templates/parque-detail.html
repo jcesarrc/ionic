@@ -4,43 +4,38 @@
   The FriendsCtrl pulls data from the Friends service (service.js)
   The Friends service returns an array of friend data
 -->
-<ion-view view-title="{{parque.name}}" class="{{parque.color}}">
+<ion-view view-title="{{parque.name}}">
 <div class="bar bar-header bar-balanced">
+  <button class="button icon ion-arrow-left-c" onclick="location.href='#/tab/parques'"></button>
   <h1 class="title">{{parque.name}}</h1>
 </div>
   <ion-content class="has-header">
-    
-    <div class="list card">
-
-      <div class="item tabs tabs-icon-left">
-        <a class="tab-item" href="{{parque.url}}">
-          <i class="icon ion-ios-world"></i>
-          Web
-        </a>
-        <a class="tab-item" ng-hide="{{parque.gview.length==0}}" href="{{parque.gview}}">
-          <i class="icon ion-paper-airplane"></i>
-          Recorrido virtual
-        </a>
-        <a class="tab-item" href="#/tab/reserva/{{parque.id}}">
-          <i class="icon ion-calendar"></i>
-          Reservar
-        </a>
+  <div class="item" style="padding:0; margin:0;">
+    <div id="headerdetail" style="background-image:url({{parque.image}}); background-size: cover; height: 220px;">
+      <div id="tituloparque">
+        <div class="prefix">{{parque.prefix}}</div>
+        <div class="nombreparque">{{parque.name}}</div>
       </div>
-
-      <div class="item item-body centered">
-        <div class="row">
-          <div class="col">
-            <img class="imagenparque" ng-src="{{parque.image}}">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <img class="fichatecnica" ng-src="{{parque.ficha}}">
-          </div>
-          <div class="col" style="text-align:justify;">
+    </div>
+    </div>
+    <div class="item tabs tabs-icon-left {{parque.color}}" 
+    style="border:0; color:#FFF;">
+      <a class="tab-item" href="{{parque.url}}">
+        <i class="icon ion-ios-world"></i>Web
+      </a>
+      <a class="tab-item" ng-hide="{{parque.gview.length==0}}" href="{{parque.gview}}">
+        <i class="icon ion-paper-airplane"></i>Recorrido virtual
+      </a>
+      <a class="tab-item" href="#/tab/reserva/{{parque.id}}">
+        <i class="icon ion-calendar"></i>Reservar
+      </a>
+    </div>
+    <div class="list card" style="padding:0; margin: 0;">
+      <div class="item item-body centered brown" style="padding:0; margin: 0;">
+      <div style="text-align:justify; margin: 20px; font-weight: bold; color:#514911;">
               {{parque.desc}}
-          </div>
-        </div>
+      </div>
+      <img class="fichatecnica" ng-src="{{parque.ficha}}">          
       </div>
     </div>
 
