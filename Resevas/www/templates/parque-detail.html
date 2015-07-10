@@ -1,0 +1,50 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="{{parque.name}}" class="{{parque.color}}">
+<div class="bar bar-header bar-balanced">
+  <h1 class="title">{{parque.name}}</h1>
+</div>
+  <ion-content class="has-header">
+    
+    <div class="list card">
+
+      <div class="item tabs tabs-icon-left">
+        <a class="tab-item" href="{{parque.url}}">
+          <i class="icon ion-ios-world"></i>
+          Web
+        </a>
+        <a class="tab-item" ng-hide="{{parque.gview.length==0}}" href="{{parque.gview}}">
+          <i class="icon ion-paper-airplane"></i>
+          Recorrido virtual
+        </a>
+        <a class="tab-item" href="#/tab/reserva/{{parque.id}}">
+          <i class="icon ion-calendar"></i>
+          Reservar
+        </a>
+      </div>
+
+      <div class="item item-body centered">
+        <div class="row">
+          <div class="col">
+            <img class="imagenparque" ng-src="{{parque.image}}">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <img class="fichatecnica" ng-src="{{parque.ficha}}">
+          </div>
+          <div class="col" style="text-align:justify;">
+              {{parque.desc}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </ion-content>
+</ion-view>

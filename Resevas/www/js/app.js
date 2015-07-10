@@ -57,31 +57,40 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
-  .state('tab.chats', {
+  .state('tab.parques', {
       url: '/parques',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
+        'tab-parques': {
+          templateUrl: 'templates/tab-parques.html',
+          controller: 'ParquesCtrl'
         }
       }
     })
-    .state('tab.chat-detail', {
+    .state('tab.parque-detail', {
       url: '/parque/:parqueId',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
+        'tab-parques': {
+          templateUrl: 'templates/parque-detail.html',
           controller: 'ParqueDetailCtrl'
         }
       }
     })
 
-  .state('tab.account', {
-    url: '/account',
+  .state('tab.contacto', {
+    url: '/contacto',
     views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
+      'tab-contacto': {
+        templateUrl: 'templates/tab-contacto.html'
+      }
+    }
+  })
+
+  .state('tab.reserva', {
+    url: '/reserva/:parqueId',
+    views: {
+      'tab-parques': {
+        templateUrl: 'templates/tab-reserva.html',
+        controller: 'ReservaCtrl'
       }
     }
   });
