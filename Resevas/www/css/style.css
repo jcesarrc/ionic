@@ -25,6 +25,14 @@ Magenta-alpha:		#DA214A
 	text-align: center;
 }
 
+.col{
+	padding: 0 !important;
+}
+
+.col img{
+	max-height: 300px;
+}
+
 .fichatecnica{
 	width: 90%;
 }
