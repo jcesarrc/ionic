@@ -36,6 +36,32 @@ Magenta-alpha:		#DA214A
 	max-height: 300px;
 }
 
+.confirmacion{
+	background-color: #2659b2;
+	padding: 40px;
+	color: #FFF !important;
+	white-space: normal;
+	line-height: 30px;
+}
+
+.confirmacion .msj{
+
+	font-size: 26px;
+}
+
+.confirmacion .submsj{
+	position: absolute;
+	font-size: 16px;
+	bottom: 200px;
+	margin-right: 20px;
+}
+
+#confirmacion{
+	height: 200px;
+	background: url('http://farm4.static.flickr.com/3146/3385917252_77c3135572.jpg') no-repeat;
+	background-size: cover;
+}
+
 .fichatecnica{
 	width: 80%;
 }

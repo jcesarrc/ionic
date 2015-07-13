@@ -85,6 +85,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
+  .state('tab.confirmacion', {
+    url: '/confirmacion',
+    views: {
+      'tab-parques': {
+        templateUrl: 'templates/confirmacion.html'
+      }
+    }
+  })
+
   .state('tab.reserva', {
     url: '/reserva/:parqueId',
     views: {
