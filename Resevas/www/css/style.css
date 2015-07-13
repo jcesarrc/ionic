@@ -12,6 +12,9 @@ Magenta-alpha:		#DA214A
 
 */
 
+.brown{
+	background-color: #C0C174 !important;
+}
 
 .caribbean{
 	background-color: #009EE0;
@@ -34,7 +37,7 @@ Magenta-alpha:		#DA214A
 }
 
 .fichatecnica{
-	width: 90%;
+	width: 80%;
 }
 
 .imagenparque{
@@ -81,6 +84,32 @@ Magenta-alpha:		#DA214A
 	background: #d7d9a8;
 }
 
+.prefix{
+	font-size: 14	px !important;
+}
+
+.nombreparque{
+	font-size: 24px !important;
+	font-weight: bold;
+	text-transform: uppercase;
+	white-space: normal;
+}
+
+#tituloparque{
+	position: absolute;
+	color: #FFF !important;
+	padding: 20px !important;
+	top: 0;
+	width: 100%;
+}
+
+#footertitulo{
+	position: absolute;
+	bottom: 0;
+	height: 20px;
+	width: 100%;
+	color: #FFF;
+}
 
 video#bgvid {
 position: fixed;
