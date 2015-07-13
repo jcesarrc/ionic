@@ -12,8 +12,17 @@ Magenta-alpha:		#DA214A
 
 */
 
+
+.blue{
+	background-color: #2659b2 !important;
+}
+
+.bluemanobi{
+	background-color: #00557C !important;
+}
+
 .brown{
-	background-color: #C0C174 !important;
+	background: url('../img/fondo.png');	
 }
 
 .caribbean{
@@ -41,29 +50,29 @@ Magenta-alpha:		#DA214A
 	padding: 40px;
 	color: #FFF !important;
 	white-space: normal;
-	line-height: 30px;
+	opacity: 0.9;
 }
 
 .confirmacion .msj{
-
+	margin-top: 20px;
 	font-size: 26px;
+	line-height: 30px;
 }
 
 .confirmacion .submsj{
-	position: absolute;
 	font-size: 16px;
-	bottom: 200px;
 	margin-right: 20px;
+	line-height: normal;
 }
 
 #confirmacion{
-	height: 200px;
-	background: url('http://farm4.static.flickr.com/3146/3385917252_77c3135572.jpg') no-repeat;
-	background-size: cover;
+	height: 300px;
+	background: url('../img/manobi.jpg') no-repeat center;
+	background-size: contain;
 }
 
 .fichatecnica{
-	width: 80%;
+	width: 60%;
 }
 
 .imagenparque{
@@ -135,6 +144,12 @@ Magenta-alpha:		#DA214A
 	height: 20px;
 	width: 100%;
 	color: #FFF;
+}
+
+
+.redondeado{
+
+	border-radius: 5px;
 }
 
 video#bgvid {

@@ -9,38 +9,46 @@
 <button class="button icon ion-arrow-left-c" onclick="location.href='#/tab/parques'"></button>
   <h1 class="title">Reservar</h1>
 </div>
-  <ion-content class="has-header">
-    <h4 class="padding">Para realizar la reserva al {{parque.prefix}} {{parque.name}} completa por favor los siguientes datos:</h4>
+  <ion-content class="has-header brown">
     <div class="list card">
-      <div class="item item-divider"> </div>
+      <div class="item item-avatar bluemanobi">
+          <img src="img/manobism.jpg">
+          <p>
+            <h4 class="padding" style="white-space: normal; color:#FFF;">Para hacer una reserva en el {{parque.prefix}} {{parque.name}} completa por favor los siguientes datos:</h4>
+          </p>
+      </div>
       <div class="item item-body">
           <div class="list">
-            <label class="item item-input item-stacked-label">
+            <label class="item item-input">
               <span class="input-label">Nombre</span>
-              <input type="text" placeholder="Nombre completo">
+              <input type="text" placeholder="su nombre completo">
             </label>
-            <label class="item item-input item-stacked-label">
-              <span class="input-label">Correo electronico</span>
-              <input type="email" placeholder="e-mail">
+            <label class="item item-input">
+              <span class="input-label">E-mail</span>
+              <input type="email" placeholder="correo electrónico">
             </label>
-            <label class="item item-input item-stacked-label">
+            <label class="item item-input">
               <span class="input-label">Desde</span>
               <i class="icon ion-calendar placeholder-icon"></i>
               <input type="date">
             </label>
-            <label class="item item-input item-stacked-label">
+            <label class="item item-input">
               <span class="input-label">Hasta</span>
               <i class="icon ion-calendar placeholder-icon"></i>
               <input type="date">
             </label>
             <label class="item item-input item-stacked-label">
               <span class="input-label">Mensaje</span>
-              <textarea rows="4"></textarea>
+              <textarea rows="4" placeholder="Observación adicional"></textarea>
             </label><br><br>
             <div class="centered">
-              <button class="button button-balanced pull-right"
+              <button class="button button-balanced pull-right redondeado"
               onclick="location.href='#/tab/confirmacion'">
                 <i class="icon ion-email"> &nbsp;Enviar</i>
+              </button>
+              <button class="button button-balanced pull-right redondeado"
+              onclick="location.href='#/tab/parques'">
+                <i class="icon ion-arrow-left-c"> &nbsp;Salir &nbsp; </i>
               </button>
             </div>
           </div>

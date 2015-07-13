@@ -33,7 +33,7 @@ angular.module('starter.services', [])
     desc:   'El Parque Nacional Natural Utría ubicado en la provincia biogeografía del Chocó, en la costa norte del pacífico colombiano, se encuentra bajo la jurisdicción de los municipios de Bahía Solano, Nuquí, Alto Baudó y Bojayá, departamento del Chocó. Cerca del 80% de su territorio se encuentra traslapado con tres resguardos de la etnia Embera, y es también territorio ancestral de comunidades afro descendientes que dependen de los bienes y servicios provistos por el área protegida.',
     url:    'http://www.parquesnacionales.gov.co/portal/es/ecoturismo/region-pacifico/parque-nacional-natural-utria/',
     ficha:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/08/Utrr%C3%ADa.jpg',
-    image:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/08/s032.jpg',
+    image:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/08/s023.jpg',
     gview:  '',
     color:  'pacific',
   }, {
@@ -44,7 +44,7 @@ angular.module('starter.services', [])
     desc:   'Gorgona es un pequeño paraíso de diversidad y un lugar privilegiado para la investigación científica. Uno de los rasgos más sorprendentes de Gorgona salta a la vista desde alta mar: una frondosa y exuberante selva tropical desciende directamente desde las pequeñas cumbres nubladas hasta el azul intenso de las aguas misteriosas del océano Pacífico. Pero las verdaderas sorpresas son las que se esconden bajo estas deslumbrantes superficies, tanto en tierra como en el mar. En Gorgona se encuentran especies propias de la selva húmeda tropical, formaciones coralinas, gran variedad de especies marinas, colonias de nidación de aves marinas y de migración de aves playeras y marinas. Sus aguas son frecuentadas por delfines, cachalotes y la ballena jorobada, entre otros.',
     url:    'http://www.parquesnacionales.gov.co/portal/es/ecoturismo/region-pacifico/parque-nacional-natural-gorgona/',
     ficha:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/07/Gorgona2.jpg',
-    image:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/07/gorgona-11-fto-patrick-del-castillo.jpg',
+    image:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/07/Txemi_L%C3%B3pez.jpg',
     gview:  '',
     color:  'pacific',
   },{

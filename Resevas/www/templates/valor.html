@@ -1,0 +1,18 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="{{parque.name}}">
+<div class="bar bar-header bar-balanced">
+  <button class="button icon ion-arrow-left-c" onclick="location.href='#/tab/parques'"></button>
+  <h1 class="title">{{parque.name}}</h1>
+</div>
+  <ion-content class="has-header">
+  <ion-scroll zooming="true" direction="xy" style="width: 500px; height: 500px">
+  <div style="width: 1772px; height: 4430px; background: url('http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/06/Derechos-de-Ingreso-y-Permanencia-2015.jpg') no-repeat"></div>
+ </ion-scroll>
+    </div>
+  </ion-content>
+</ion-view>
