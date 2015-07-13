@@ -1,0 +1,31 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="Este parque está en concesion">
+<div class="bar bar-header bar-balanced">
+  <button class="button icon ion-arrow-left-c" onclick="location.href='#/tab/parques'"></button>
+  <h1 class="title">Contacto para reserva</h1>
+</div>
+  <ion-content class="has-header blue">
+  <div class="item" style="padding:0; margin:0; border: 0;">
+    <div class="confirmacion centered" style="vertical-align: middle;">
+        <div class="msj"><b>Para hacer una reserva</b></div>
+        <div class="submsj">en el {{parque.prefix}} {{parque.name}} comuníquese a alguno de los siguientes teléfonos</div>
+        <br><br>
+        <div id="confirmacion" style="height: 100px;">
+        </div>
+        <div id="concesion" ng-bind-html="parque.concesion">
+        
+        </div><br>
+        <button class="button button-balanced pull-right redondeado" 
+        onclick="location.href='#/tab/parques'">
+        &nbsp;<i class="icon ion-arrow-left-c">&nbsp;&nbsp;Regresar&nbsp;&nbsp;</i>
+        </button>
+    </div>
+  </div>
+
+  </ion-content>
+</ion-view>

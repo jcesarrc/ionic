@@ -19,7 +19,7 @@
     </div>
     </div>
     <div class="item tabs tabs-icon-left {{parque.color}}" 
-    style="border:0; color:#FFF;">
+    style="border: 0  ;">
       <a class="tab-item" href="{{parque.url}}" target="_blank">
         <i class="icon ion-ios-world"></i>Web
       </a>
@@ -29,7 +29,10 @@
       <a class="tab-item" href="#/tab/valor">
         <i class="icon ion-cash"></i>Valor ingreso
       </a>
-      <a class="tab-item" href="#/tab/reserva/{{parque.id}}">
+      <a class="tab-item" ng-hide="{{parque.concesion.length!=0}}" href="#/tab/reserva/{{parque.id}}">
+        <i class="icon ion-calendar"></i>Reservar
+      </a>
+      <a class="tab-item" ng-hide="{{parque.concesion.length==0}}" href="#/tab/concesion/{{parque.id}}">
         <i class="icon ion-calendar"></i>Reservar
       </a>
     </div>

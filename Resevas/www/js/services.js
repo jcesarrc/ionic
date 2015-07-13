@@ -36,6 +36,7 @@ angular.module('starter.services', [])
     image:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/08/s023.jpg',
     gview:  '',
     color:  'pacific',
+    concesion: '',
   }, {
     id: 1,
     region: 'PCF',
@@ -47,6 +48,7 @@ angular.module('starter.services', [])
     image:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/07/Txemi_L%C3%B3pez.jpg',
     gview:  '',
     color:  'pacific',
+    concesion: '',
   },{
     id: 2,
     region: 'PCF',
@@ -58,6 +60,7 @@ angular.module('starter.services', [])
     image:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/07/Sphyrna_lewini_Martillo_311204_Yves_Lef%C3%A8vre.jpg',
     gview:  '',
     color:  'pacific',
+    concesion: '',
   },{
     id: 3,
     region: 'CRB',
@@ -69,6 +72,7 @@ angular.module('starter.services', [])
     image:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/06/Aviatur.jpg',
     gview:  'http://www.google.com/maps/views/u/0/view/streetview/colombia-highlights/tayrona-national-natural-park-1/',
     color:  'caribbean',
+    concesion: '<p><strong>Bogotá</strong><br><strong>Tel:</strong> (57 1) 587 5181 / 587 5182<br><strong>Email:</strong> <a href="mailto:ecoturismo@aviatur.travel">ecoturismo@aviatur.travel</a><br><strong>Call Center (24 horas):</strong> (57 1) 382 1616 / 381 1000<br><strong>Celular:</strong> 317 439 5444<br><a href="http://www.aviaturecoturismo.com">www.aviaturecoturismo.com</a></p><p><strong>Medellín</strong><br><strong>Tel:</strong> (57 4) 576 5000 / 576 5020<br><strong>Email:</strong> <a href="mailto:parquesmedellin@aviatur.com.co">parquesmedellin@aviatur.com.co</a></p><p><strong>Cali</strong><br><strong>Tel:</strong> (57 2) 664 5050<br><strong>Email:</strong> <a href="mailto:reservasparquescali@aviatur.com.co">reservasparquescali@aviatur.com.co</a></p><p><strong>Cartagena</strong><br><strong>Tel:</strong> (57 5) 655 4800 IP: 50230<br>Email: <a href="mailto:piedad.colina@aviatur.com.co">piedad.colina@aviatur.com.co</a></p><p><strong>Santa Marta</strong><br>Calle 15 N° 3 -20<br><strong>Tel:</strong> (57 5) 421 3848 / 423 5655<br><strong>Email:</strong> <a href="mailto:J_polo@aviatur.com.co">J_polo@aviatur.com.co</a></p><p><strong>Atención al Usuario de Parques Nacionales Naturales<br></strong>Cra. 10 No. 20 – 30, Bogotá<br><strong>Tel:</strong> PBX (57 1) 353 2400 Ext. 138, 139<br><strong>Email:</strong> <a href="mailto:ecoturismo@parquesnacionales.gov.co">ecoturismo@parquesnacionales.gov.co</a><br><a href="http://www.parquesnacionales.gov.co">www.parquesnacionales.gov.co</a></p><p><strong>Dirección Territorial Caribe</strong><br>Calle 17 No. 4 – 06, Santa Marta<br>Tel:&nbsp;PBX (57 5) 423 0752 / 423 0704<br>Email: <a href="mailto:tayrona@parquesnacionales.gov.co">tayrona@parquesnacionales.gov.co</a></p>',
   },{
     id: 4,
     region: 'CRB',
@@ -80,6 +84,7 @@ angular.module('starter.services', [])
     image:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/07/PNN_Sierra_Nevada_de_Santa_Marta_-_aerea_-_danilo.jpg',
     gview:  '',
     color:  'caribbean',
+    concesion: '',
   },{
     id: 5,
     region: 'AND',
@@ -91,6 +96,7 @@ angular.module('starter.services', [])
     image:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/07/Cocuy_-_Paisaje_-_Fotograf%C3%ADa_David_Paez._Archivo_de_Parques_268.jpg',
     gview:  '',
     color:  'caribbean',
+    concesion: '',
   },];
 
   return {

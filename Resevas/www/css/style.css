@@ -12,6 +12,10 @@ Magenta-alpha:		#DA214A
 
 */
 
+.tab-item {
+  color: white !important;
+  opacity: 1 !important;
+}
 
 .blue{
 	background-color: #2659b2 !important;
@@ -53,6 +57,18 @@ Magenta-alpha:		#DA214A
 	opacity: 0.9;
 }
 
+#concesion p{
+	color: #FFF !important;
+	font-size: 14px;
+	text-align: left;
+	white-space: normal;
+	padding-top: 20px;
+}
+
+#concesion p a{
+	color: #FFF;
+}
+
 .confirmacion .msj{
 	margin-top: 20px;
 	font-size: 26px;
@@ -72,7 +88,7 @@ Magenta-alpha:		#DA214A
 }
 
 .fichatecnica{
-	width: 60%;
+	width: 50%;
 }
 
 .imagenparque{
