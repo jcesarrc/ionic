@@ -1,9 +1,4 @@
-<!--
-  This template loads for the 'tab.friend-detail' state (app.js)
-  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
-  The FriendsCtrl pulls data from the Friends service (service.js)
-  The Friends service returns an array of friend data
--->
+
 <ion-view view-title="{{parque.name}}">
 <div class="bar bar-header bar-balanced">
   <button class="button icon ion-arrow-left-c" onclick="location.href='#/tab/parques'"></button>
@@ -20,10 +15,15 @@
     </div>
     <div class="item tabs tabs-icon-left {{parque.color}}" 
     style="border: 0  ;">
+    <!--
       <a class="tab-item" href="{{parque.url}}" target="_blank">
         <i class="icon ion-ios-world"></i>Web
       </a>
-      <a class="tab-item" ng-hide="{{parque.gview.length==0}}" href="{{parque.gview}}" target="_blank">
+      -->
+      <a class="tab-item" ng-click="openurl('{{parque.url}}')">
+        <i class="icon ion-ios-world"></i>Web
+      </a>
+      <a class="tab-item" ng-hide="{{parque.gview.length==0}}" ng-click="openurl('{{parque.gview}}')">
         <i class="icon ion-paper-airplane"></i>Recorrido virtual
       </a>
       <a class="tab-item" href="#/tab/valor">

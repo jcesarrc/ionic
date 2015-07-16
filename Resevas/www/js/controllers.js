@@ -13,8 +13,11 @@ angular.module('starter.controllers', [])
   $scope.parques = Parques.all();
 })
 
-.controller('ParqueDetailCtrl', function($scope, $stateParams, Parques) {
+.controller('ParqueDetailCtrl', function($scope, $stateParams, Parques, $window) {
   $scope.parque = Parques.get($stateParams.parqueId);
+  $scope.openurl = function(url){
+    $window.open(url, '_blank', 'location=yes');
+  };
 })
 
 .controller('ReservaCtrl', function($scope, $stateParams, Parques) {

@@ -169,7 +169,7 @@ Magenta-alpha:		#DA214A
 }
 
 video#bgvid {
-	background: url();
+	
 position: fixed;
 top: 50%;
 left: 80%;
@@ -177,10 +177,15 @@ min-width: 100%;
 min-height: 100%;
 width: auto;
 height: auto;
+z-index: -100;
+background: transparent url('../img/flamencos.png') no-repeat 0 0;
 -webkit-transform: translateX(-50%) translateY(-50%);
 transform: translateX(-50%) translateY(-50%);
 background-size: contain;
-opacity: 0.6;
+-webkit-background-size: contain;
+-moz-background-size: contain;
+-o-background-size: contain;
+opacity: 0.7;
 }
 
 video#bgvid-original {
