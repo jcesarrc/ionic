@@ -29,12 +29,20 @@ Magenta-alpha:		#DA214A
 	background: url('../img/fondo.png');	
 }
 
+.andes{
+	background-color: #E15517;
+}
+
 .caribbean{
 	background-color: #009EE0;
 }
 
 .pacific{
 	background-color: #DA214A;
+}
+
+.orinoquian{
+	background-color: #04376B;
 }
 
 .centered{
