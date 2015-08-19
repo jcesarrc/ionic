@@ -1,0 +1,20 @@
+<ion-view view-title="Parques">
+<!--
+  <div class="bar bar-header bar-balanced item-input-inset">
+    <label class="item-input-wrapper">
+    <i class="icon ion-ios-search placeholder-icon"></i>
+    <input ng-model="search.name" type="search" placeholder="Buscar">
+    </label>
+  </div>
+-->
+  <ion-content>
+    <ion-list>
+      <ion-item class="item item-thumbnail my-thumbnail {{parque.color}}" ng-repeat="parque in parques" 
+      type="item-text-wrap" href="#/tab/parque/{{parque.id}}">
+        <div style="background-image:url({{parque.image}}); background-size: cover; height: 200px;">
+          <p class="infoparque">{{parque.prefix}}<br><span>{{parque.name}}<span></p>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

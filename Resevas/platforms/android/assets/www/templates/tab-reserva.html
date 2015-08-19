@@ -1,0 +1,61 @@
+
+<ion-view view-title="Reservar" >
+<div class="bar bar-header bar-balanced">
+<button class="button icon ion-arrow-left-c" onclick="location.href='#/tab/parques'"></button>
+  <h1 class="title">Reservar</h1>
+</div>
+  <ion-content class="has-header brown">
+    <div class="list card">
+      <div class="item item-avatar bluemanobi">
+          <img src="img/manobism.jpg">
+          <p>
+            <h4 class="padding" style="white-space: normal; color:#FFF;">Para hacer una reserva en el {{parque.prefix}} {{parque.name}} completa por favor los siguientes datos:</h4>
+          </p>
+      </div>
+      <div class="item item-body">
+          <div class="list">
+            <label class="item item-input">
+              <span class="input-label">Nombre</span>
+              <input type="text" placeholder="su nombre completo">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">E-mail</span>
+              <input type="email" placeholder="correo electrónico">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Tel.</span>
+              <input type="tel" placeholder="teléfono">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Personas</span>
+              <input type="number" placeholder="número de personas" min="1">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Ingreso</span>
+              <i class="icon ion-calendar placeholder-icon"></i>
+              <input type="date">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Salida</span>
+              <i class="icon ion-calendar placeholder-icon"></i>
+              <input type="date">
+            </label>
+            <br>
+            <div class="centered">
+              <button class="button button-balanced pull-right redondeado"
+              onclick="location.href='#/tab/confirmacion'">
+                <i class="icon ion-email"> &nbsp;Enviar</i>
+              </button>
+              <button class="button button-balanced pull-right redondeado"
+              onclick="location.href='#/tab/parques'">
+                <i class="icon ion-arrow-left-c"> &nbsp;Salir &nbsp; </i>
+              </button>
+            </div>
+          </div>
+      </div>
+    </div>
+
+
+
+  </ion-content>
+</ion-view>
