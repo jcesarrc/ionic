@@ -3,6 +3,13 @@ angular.module('starter.services', [])
 .factory('Parques', function() {
   // Might use a resource here that returns a JSON array
 
+  var reserva = [{
+    adultos : 0,
+    ninos: 0,
+    extranjeros: 0,
+    total : 0,
+  }];
+
   var regiones = [{
     id: 'PCF',
     name: 'Region Pacífico',
@@ -25,10 +32,54 @@ angular.module('starter.services', [])
     desc: 'Selva',
   }];
 
+  var tarifas = [
+    {
+      id: 1,
+      adulto_nacional: 15000,
+      nino: 8000,
+      extranjero: 39500,
+    },
+    {
+      id: 2,
+      adulto_nacional: 12500,
+      nino: 8000,
+      extranjero: 37000,
+    },
+    {
+      id: 3,
+      adulto_nacional: 9000,
+      nino: 4000,
+      extranjero: 21500,
+    },
+    {
+      id: 4,
+      adulto_nacional: 9000,
+      nino: 4000,
+      extranjero: 15000,
+    },
+    {
+      id: 5,
+      adulto_nacional: 26000,
+      nino: 12500,
+      extranjero: 52000,
+    },
+    {
+      id: 6,
+      adulto_nacional: 17500,
+      nino: 10500,
+      extranjero: 42000,
+    },
+    {
+      id: 7,
+      adulto_nacional: 9000,
+      nino: 4500,
+      extranjero: 25500,
+    }
+  ];
   var parques = [{
     id: 0,
     region: 'PCF',
-    prefix: 'Parque Nacional',
+    prefix: 'Parque Nacional Natural',
     name:   'Utria',
     desc:   'El Parque Nacional Natural Utría ubicado en la provincia biogeografía del Chocó, en la costa norte del pacífico colombiano, se encuentra bajo la jurisdicción de los municipios de Bahía Solano, Nuquí, Alto Baudó y Bojayá, departamento del Chocó. Cerca del 80% de su territorio se encuentra traslapado con tres resguardos de la etnia Embera, y es también territorio ancestral de comunidades afro descendientes que dependen de los bienes y servicios provistos por el área protegida.',
     url:    'http://www.parquesnacionales.gov.co/portal/es/ecoturismo/region-pacifico/parque-nacional-natural-utria/',
@@ -36,6 +87,10 @@ angular.module('starter.services', [])
     image:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/08/s023.jpg',
     gview:  '',
     color:  'pacific',
+    tarifa: 1,
+    camping: 1,
+    alojamiento: 1,
+    restaurante: 1,
     concesion: '<p><strong>Corporación Mano Cambiada <br>Tel:</strong><br> 3107937664 <br> 3137596170 </p>',
   }, {
     id: 1,
@@ -48,6 +103,10 @@ angular.module('starter.services', [])
     image:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/07/Txemi_L%C3%B3pez.jpg',
     gview:  '',
     color:  'pacific',
+    tarifa: 6,
+    camping: 0,
+    alojamiento: 0,
+    restaurante: 0,
     concesion: '',
   },{
     id: 2,
@@ -59,12 +118,15 @@ angular.module('starter.services', [])
     ficha:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/07/Malpelo1.jpg',
     image:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/07/Sphyrna_lewini_Martillo_311204_Yves_Lef%C3%A8vre.jpg',
     gview:  '',
+    camping: 0,
+    alojamiento: 0,
+    restaurante: 0,
     color:  'pacific',
     concesion: '',
   },{
     id: 3,
     region: 'CRB',
-    prefix: 'Parque Nacional',
+    prefix: 'Parque Nacional Natural',
     name:   'Tayrona',
     desc:   'Las estribaciones de la Sierra Nevada de Santa Marta, la montaña costera más alta del mundo, se hunden en el mar como los dedos de una mano gigantesca entre los que se forman bahías y ensenadas de belleza singular: Chengue, Gayraca, Cinto, Neguanje, Concha, Guachaquita, con sus playas de arenas blancas delimitadas por, manglares, matorrales o bosques, y bañadas todas por las aguas cristalinas del mar Caribe, hacen parte de los muchos atractivos que ofrece el Parque Nacional Natural Tayrona. Para quienes buscan la contemplación y el descanso, el Parque ofrece magníficas playas y el relajante panorama de un mar intensamente azul. Quienes se sienten atraídos por actividades más emocionantes podrán disfrutar de caminatas, careteo y buceo autónomo. El parque Tayrona tiene también vestigios arqueológicos de una antigua ciudad del pueblo Tayrona.',
     url:    'http://www.parquesnacionales.gov.co/portal/es/ecoturismo/region-caribe/parque-nacional-natural-tayrona/',
@@ -72,11 +134,15 @@ angular.module('starter.services', [])
     image:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/06/Aviatur.jpg',
     gview:  'http://www.google.com/maps/views/u/0/view/streetview/colombia-highlights/tayrona-national-natural-park-1/',
     color:  'caribbean',
+    tarifa: 1,
+    camping: 1,
+    alojamiento: 1,
+    restaurante: 1,
     concesion: '<p><strong>Bogotá</strong><br><strong>Tel:</strong> (57 1) 587 5181 / 587 5182<br><strong>Email:</strong> <a href="mailto:ecoturismo@aviatur.travel">ecoturismo@aviatur.travel</a><br><strong>Call Center (24 horas):</strong> (57 1) 382 1616 / 381 1000<br><strong>Celular:</strong> 317 439 5444<br><a href="http://www.aviaturecoturismo.com">www.aviaturecoturismo.com</a></p><p><strong>Medellín</strong><br><strong>Tel:</strong> (57 4) 576 5000 / 576 5020<br><strong>Email:</strong> <a href="mailto:parquesmedellin@aviatur.com.co">parquesmedellin@aviatur.com.co</a></p><p><strong>Cali</strong><br><strong>Tel:</strong> (57 2) 664 5050<br><strong>Email:</strong> <a href="mailto:reservasparquescali@aviatur.com.co">reservasparquescali@aviatur.com.co</a></p><p><strong>Cartagena</strong><br><strong>Tel:</strong> (57 5) 655 4800 IP: 50230<br>Email: <a href="mailto:piedad.colina@aviatur.com.co">piedad.colina@aviatur.com.co</a></p><p><strong>Santa Marta</strong><br>Calle 15 N° 3 -20<br><strong>Tel:</strong> (57 5) 421 3848 / 423 5655<br><strong>Email:</strong> <a href="mailto:J_polo@aviatur.com.co">J_polo@aviatur.com.co</a></p><p><strong>Atención al Usuario de Parques Nacionales Naturales<br></strong>Cra. 10 No. 20 – 30, Bogotá<br><strong>Tel:</strong> PBX (57 1) 353 2400 Ext. 138, 139<br><strong>Email:</strong> <a href="mailto:ecoturismo@parquesnacionales.gov.co">ecoturismo@parquesnacionales.gov.co</a><br><a href="http://www.parquesnacionales.gov.co">www.parquesnacionales.gov.co</a></p><p><strong>Dirección Territorial Caribe</strong><br>Calle 17 No. 4 – 06, Santa Marta<br>Tel:&nbsp;PBX (57 5) 423 0752 / 423 0704<br>Email: <a href="mailto:tayrona@parquesnacionales.gov.co">tayrona@parquesnacionales.gov.co</a></p>',
   },{
     id: 4,
     region: 'CRB',
-    prefix: 'Parque Nacional',
+    prefix: 'Parque Nacional Natural',
     name:   'Corales del Rosario y de San Bernardo',
     desc:   'El Parque Corales del Rosario, posee un importante conjunto de ecosistemas, habitado principalmente por arrecifes coralinos que albergan cientos de animales, entre ellos, peces de distintas formas y colores, corales, crustáceos y otras especies. Pocos lugares en el mundo ofrecen un espectáculo de belleza y diversidad tan extraordinario como un arrecife de coral. La belleza de un arrecife de coral, no obedece únicamente a la diversidad de sus formas y colores. Estas formaciones sirven de sustrato a una enorme variedad de organismos de gran colorido: algas calcáreas, esponjas, gusanos plumeros, lirios de mar, anémonas y corales blandos, entre otros. En Corales del Rosario, es posible observar, a muy poca profundidad y en aguas totalmente cristalinas, este extraordinario espectáculo que supera la más vívida imaginación.',
     url:    'http://www.parquesnacionales.gov.co/portal/es/ecoturismo/region-caribe/parque-nacional-natural-corales-del-rosario-y-de-san-bernardo/',
@@ -84,6 +150,9 @@ angular.module('starter.services', [])
     image:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/07/s082.jpg',
     gview:  '',
     color:  'caribbean',
+    camping: 0,
+    alojamiento: 0,
+    restaurante: 0,
     concesion: '<p><strong>Oficina de parques Cartagena <br>Tel:</strong> (57 5) 6455230 <br><strong>La Cocotera<br><strong>Tel: </strong>3164266052 / 3164740820<br></p>',
   },{
     id: 5,
@@ -96,6 +165,10 @@ angular.module('starter.services', [])
     image:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/07/Julia_Miranda_Londo%C3%B1o_s04.jpg',
     gview:  '',
     color:  'caribbean',
+    tarifa: 1,
+    camping: 0,
+    alojamiento: 0,
+    restaurante: 0,
     concesion: '<p><strong>Isla de Salamanca</strong><br><strong>Tel:</strong> 3125777111<br><strong>Email:</strong> <a href="mailto:info@parqueisladesalamanca.org ">info@parqueisladesalamanca.org</a><br></p>',
   },{
     id: 6,
@@ -108,6 +181,9 @@ angular.module('starter.services', [])
     image:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/07/Tringa_semipalmatus_SFFF__Robinson_Galindo-T.jpg',
     gview:  '',
     color:  'caribbean',
+    camping: 1,
+    alojamiento: 1,
+    restaurante: 1,
     concesion: '<p><strong>SFF Los Flamencos</strong><br><strong>Organización El Santuario <br>Tel:</strong> 3016753862/ 3135140366 /3005489281 <br></p>',
   },{
     id: 7,
@@ -120,6 +196,10 @@ angular.module('starter.services', [])
     image:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/07/Dunas_de_Puerto_estrella1_Uriba_Marzo_24_20131.jpg',
     gview:  '',
     color:  'caribbean',
+    tarifa: 2,
+    camping: 1,
+    alojamiento: 1,
+    restaurante: 1,
     concesion: '<p><strong>PNN Macuira</strong><br><strong>Ecotravel, Tel:</strong> 3116882362 <br> 3205182439 <br> 3114296315<br></p>',
   },{
     id: 8,
@@ -132,11 +212,15 @@ angular.module('starter.services', [])
     image:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/07/Angela_Echeverry_s08.jpg',
     gview:  '',
     color:  'caribbean',
+    tarifa: 4,
+    camping: 0,
+    alojamiento: 0,
+    restaurante: 1,
     concesion: '<p><strong>PNN Old Providence</strong><br><strong>Tel:</strong> (57 8) 5149003 / 5148885<br><strong>Email:</strong> <a href="mailto:oldprovidence@parquesnacionales.gov.co">oldprovidence@parquesnacionales.gov.co</a><br></p>',
   },{
     id: 9,
     region: 'CRB',
-    prefix: 'Parque Nacional',
+    prefix: 'Parque Nacional Natural',
     name:   'Sierra Nevada de Santa Marta',
     desc:   'La Sierra es la cuna de los Tayrona, una civilización indígena monumental que existió en el país. Aún viven allí descendientes de esa cultura con alrededor de 70.000 indígenas de las etnias Kogui, Arhuaco, Kankuamo y Wiwa. Es la formación montañosa litoral más elevada del mundo, con dos picos de 5.775 m de altitud; el pico Cristóbal Colón y el pico Simón Bolívar. Por su variedad de ecosistemas, pisos térmicos junto al mar, su belleza singular y su riqueza histórica y cultural constituye un paraje único para visitar y fue declarado Reserva de la Biosfera por la UNESCO en 1979.',
     url:    'http://www.parquesnacionales.gov.co/portal/es/ecoturismo/region-caribe/parque-nacional-natural-sierra-nevada-de-santa-marta-2/',
@@ -144,6 +228,10 @@ angular.module('starter.services', [])
     image:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/07/Ryan_Whisner_cuidad_perdida2.jpg',
     gview:  '',
     color:  'caribbean',
+    tarifa: 3,
+    camping: 0,
+    alojamiento: 1,
+    restaurante: 0,
     concesion: '<p><strong>Santa Marta</strong><br><strong>Tel:</strong> (57 1) 4213805 / 4219401 / 4212256 <br><strong>Email:</strong> <a href="mailto:sierranevado@parquesnacionales.gov.co">sierranevado@parquesnacionales.gov.co</a><br></p>',
   },{
     id: 10,
@@ -156,11 +244,14 @@ angular.module('starter.services', [])
     image:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/08/christiam.jpg',
     gview:  '',
     color:  'caribbean',
+    camping: 0,
+    alojamiento: 0,
+    restaurante: 1,
     concesion: '<p><strong>PNN Los Colorados</strong><br><strong>Tel:</strong> (57 5) 6891058 <br><strong>Email:</strong> <a href="mailto:colorados@parquesnacionales.gov.co">colorados@parquesnacionales.gov.co</a><br></p>',
   },{
     id: 11,
     region: 'AND',
-    prefix: 'Parque Nacional',
+    prefix: 'Parque Nacional Natural',
     name:   'Cocuy',
     desc:   'Vista desde el aire, esta Sierra Nevada es un rosario de perlas blanquísimas que refulge bajo el ardiente sol de los Andes. En el ramal oriental de los Andes colombianos, se encuentra la Sierra Nevada de Güicán, El Cocuy y Chita, más de veinticinco picos cubiertos de nieves perpetuas, en dos cadenas montañosas de aproximadamente 25 kilómetros de longitud por 4 de ancho. Buena parte de esta hermosa e imponente Sierra Nevada, que constituye la mayor masa glacial de Colombia, se puede recorrer a pie. También hacen parte del Parque Nacional Natural (PNN) El Cocuy los páramos alrededor de la Sierra y una gran franja de Bosque Andino y Selva Basal que albergan gran diversidad de especies de fauna y flora.',
     url:    'http://www.parquesnacionales.gov.co/portal/es/ecoturismo/region-andina/parque-nacional-natural-cocuy/',
@@ -168,6 +259,10 @@ angular.module('starter.services', [])
     image:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/07/Cocuy_-_Paisaje_-_Fotograf%C3%ADa_David_Paez._Archivo_de_Parques_254.jpg',
     gview:  '',
     color:  'andes',
+    tarifa: 5,
+    camping: 1,
+    alojamiento: 1,
+    restaurante: 1,
     concesion: '',
   },{
     id: 12,
@@ -180,11 +275,14 @@ angular.module('starter.services', [])
     image:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/07/Ot%C3%BAn_Quimbaya_-_Fa.Ma1331-_Foto_Julian_.jpg',
     gview:  '',
     color:  'andes',
+    camping: 0,
+    alojamiento: 1,
+    restaurante: 1,
     concesion: '<p><strong>SFF Otún Quimbaya</strong><br><strong>Asociación Comunitaria Yarumo Blanco <br> Tel:</strong> 3146749248<br></p>',
   },{
     id: 13,
     region: 'AND',
-    prefix: 'Parque Nacional',
+    prefix: 'Parque Nacional Natural',
     name:   'Los Nevados',
     desc:   'El ingreso por el sector de Brisas   (Sector Norte del Parque Nacional Natural Los Nevados) solamente está permitido  hasta el Valle de las Tumbas, esto debido a que el Servicio Geológico Colombiano declaró al Volcán Nevado del Ruiz en Nivel Amarillo de actividad O III (Cambios en el comportamiento de actividad volcánica) Más información haga click aquí.',
     url:    'http://www.parquesnacionales.gov.co/portal/es/ecoturismo/region-andina/parque-nacional-natural-los-nevados/',
@@ -192,6 +290,10 @@ angular.module('starter.services', [])
     image:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/07/El_Cisne_-_Mario_H_Franco.jpg',
     gview:  '',
     color:  'andes',
+    tarifa: 7,
+    camping: 1,
+    alojamiento: 0,
+    restaurante: 1,
     concesion: '<p><strong>PNN Los Nevados</strong><br><strong>Tel:</strong> (57 6) 8871611 /8872273<br><strong>Email:</strong> <a href="mailto:nevados@parquesnacionales.gov.co"> nevados@parquesnacionales.gov.co</a><br></p>',
   },{
     id: 14,
@@ -204,6 +306,7 @@ angular.module('starter.services', [])
     image:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/07/Iguaque-Laguna13-ArchivoParques-Hern%C3%A1nLopera.jpg',
     gview:  '',
     color:  'andes',
+    tarifa: 1,
     concesion: '<p><strong>Organización Naturar Iguaque <br>Tel:</strong><br> 3185955643 <br> 3135859892 <strong>Email:</strong> <a href="mailto:naturariguaque@yahoo.es">naturariguaque@yahoo.es</a><br></p>',
   },{
     id: 15,
@@ -216,6 +319,9 @@ angular.module('starter.services', [])
     image:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/07/s04.jpg',
     gview:  '',
     color:  'andes',
+    camping: 0,
+    alojamiento: 0,
+    restaurante: 1,
     concesion: '<p><strong>Isla de la Corota</strong><br><strong>Tel:</strong> (57 2) 7364362<br><strong>Email:</strong> <a href="mailto:corota@parquesnacionales.gov.co">corota@parquesnacionales.gov.co</a><br></p>',
   },{
     id: 16,
@@ -228,6 +334,9 @@ angular.module('starter.services', [])
     image:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/07/Ingeominas_s06.jpg',
     gview:  '',
     color:  'andes',
+    camping: 0,
+    alojamiento: 0,
+    restaurante: 0,
     concesion: '<p><strong>Galeras</strong><br><strong>Tel:</strong> (57 2) 7364362<br><strong>Email:</strong> <a href="mailto:galeras@parquesnacionales.gov.co">galeras@parquesnacionales.gov.co</a><br></p>',
   },{
     id: 17,
@@ -240,6 +349,10 @@ angular.module('starter.services', [])
     image:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/07/PNN_Cueva_de_los_Guacharos_-_Lindosa_-_David_Paez_-_ArchivoParques_3.jpg',
     gview:  '',
     color:  'andes',
+    camping: 1,
+    alojamiento: 0,
+    restaurante: 1,
+    tarifa: 2,
     concesion: '<p><strong>PNN Cueva de los Guácharos</strong><br><strong>Tel:</strong> 3123273095 <br> 3132580268 <br> 3123057970<br></p>',
   },{
     id: 18,
@@ -252,6 +365,9 @@ angular.module('starter.services', [])
     image:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/08/Viaje_Adam_Isackson_355.jpg',
     gview:  '',
     color:  'orinoquian',
+    camping: 1,
+    alojamiento: 1,
+    restaurante: 1,
     concesion: '<p><strong>PNN Sierra de la Macarena</strong><br><strong>Tel:</strong> (57 8) 6648005 /662691 <br>3145217441<br></p>',
   },{
     id: 19,
@@ -263,6 +379,10 @@ angular.module('starter.services', [])
     ficha:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/08/Tuparro.jpg',
     image:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/08/DSC05247.jpg',
     gview:  '',
+    tarifa: 2,
+    camping: 0,
+    alojamiento: 0,
+    restaurante: 0,
     color:  'orinoquian',
     concesion: '',
   },{
@@ -275,6 +395,10 @@ angular.module('starter.services', [])
     ficha:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/08/Chingaza.jpg',
     image:  'http://www.parquesnacionales.gov.co/portal/wp-content/uploads/2013/08/Libia_Cifuentes.jpg',
     gview:  '',
+    tarifa: 2,
+    camping: 0,
+    alojamiento: 0,
+    restaurante: 0,
     color:  'orinoquian',
     concesion: '',
   },];
@@ -290,6 +414,17 @@ angular.module('starter.services', [])
         }
       }
       return null;
-    }
+    },
+    getTarifa: function(tarifaId){
+      for (var i = 0; i < tarifas.length; i++) {
+        if (tarifas[i].id === parseInt(tarifaId)) {
+          return tarifas[i];
+        }
+      }
+      return null;
+    },
+    getReservaModel: function() {
+      return reserva;
+    },
   };
 });

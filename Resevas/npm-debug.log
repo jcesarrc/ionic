@@ -1,0 +1,25 @@
+88261 silly gunzTarPerm extractEntry .npmignore
+88262 silly gunzTarPerm extractEntry README.md
+88263 silly gunzTarPerm extractEntry LICENSE
+88264 silly gunzTarPerm extractEntry cli.js
+88265 silly gunzTarPerm extractEntry .travis.yml
+88266 silly gunzTarPerm extractEntry AUTHORS
+88267 error Error: ENOENT, lstat '/root/tmp/npm-1584-wF_DtcRF/1447186066990-0.8287843121215701/package/dist/lodash.underscore.js'
+88268 error If you need help, you may report this log at:
+88268 error     <http://github.com/isaacs/npm/issues>
+88268 error or email it to:
+88268 error     <npm-@googlegroups.com>
+88269 error System Linux 3.13.0-62-generic
+88270 error command "/usr/bin/nodejs" "/usr/bin/npm" "install" "-g" "cordova" "ionic"
+88271 error cwd /vagrant/ionic/Resevas
+88272 error node -v v0.10.25
+88273 error npm -v 1.3.10
+88274 error path /root/tmp/npm-1584-wF_DtcRF/1447186066990-0.8287843121215701/package/dist/lodash.underscore.js
+88275 error fstream_path /root/tmp/npm-1584-wF_DtcRF/1447186066990-0.8287843121215701/package/dist/lodash.underscore.js
+88276 error fstream_type File
+88277 error fstream_class FileWriter
+88278 error code ENOENT
+88279 error errno 34
+88280 error fstream_stack /usr/lib/nodejs/fstream/lib/writer.js:284:26
+88280 error fstream_stack Object.oncomplete (fs.js:107:15)
+88281 verbose exit [ 34, true ]

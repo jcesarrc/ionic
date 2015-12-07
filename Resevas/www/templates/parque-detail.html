@@ -36,6 +36,28 @@
         <i class="icon ion-calendar"></i>Reservar
       </a>
     </div>
+    <div class="card" ng-show="{{parque.alojamiento==1 || parque.restaurante==1 || parque.camping ==1}}">
+      <div class="item item-text-wrap" style="text-align:center;">
+        <img src="img/restaurante.jpg" ng-show="{{parque.restaurante==1}}">
+        <img src="img/alojamiento.jpg" ng-show="{{parque.alojamiento==1}}">
+        <img src="img/camping.jpg" ng-show="{{parque.camping==1}}">
+      </div>
+    </div>
+    <div class="card" ng-show="{{tarifa != undefined}}">
+      <div class="item item-divider">
+        Tarifas
+      </div>
+      <div class="item item-text-wrap">
+        Adulto Nacional: {{tarifa.adulto_nacional | currency : '$ ' : 0}}
+      </div>
+      <div class="item item-text-wrap">
+        Niño: {{tarifa.nino | currency : '$ ' : 0}}
+      </div>
+      <div class="item item-text-wrap">
+        Adulto extranjero: {{tarifa.extranjero | currency : '$ ' : 0}}
+      </div>
+    </div>
+
     <div class="list card" style="padding:0; margin: 0;">
       <div class="item item-body centered brown" style="padding:0; margin: 0;">
       <div style="text-align:justify; margin: 20px; font-weight: bold; color:#514911;">

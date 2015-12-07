@@ -15,6 +15,7 @@ angular.module('starter.controllers', [])
 
 .controller('ParqueDetailCtrl', function($scope, $stateParams, Parques, $window) {
   $scope.parque = Parques.get($stateParams.parqueId);
+  $scope.tarifa = Parques.getTarifa($scope.parque.tarifa);
   $scope.openurl = function(url){
     $window.open(url, '_blank', 'location=yes');
   };
@@ -22,4 +23,6 @@ angular.module('starter.controllers', [])
 
 .controller('ReservaCtrl', function($scope, $stateParams, Parques) {
   $scope.parque = Parques.get($stateParams.parqueId);
+  $scope.tarifa = Parques.getTarifa($scope.parque.tarifa);
+  $scope.reserva = Parques.getReservaModel();
 });

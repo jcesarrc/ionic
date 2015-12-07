@@ -1,5 +1,5 @@
 
-<ion-view view-title="Reservar" >
+<ion-view view-title="Reservar">
 <div class="bar bar-header bar-balanced">
 <button class="button icon ion-arrow-left-c" onclick="location.href='#/tab/parques'"></button>
   <h1 class="title">Reservar</h1>
@@ -28,7 +28,15 @@
             </label>
             <label class="item item-input">
               <span class="input-label">Personas</span>
-              <input type="number" placeholder="número de personas" min="1">
+              <input type="number" style="text-align: center;" placeholder="adultos" min="0" ng-model="reserva.adultos"><br>
+            </label>
+            <label class="item item-input">
+              <span class="input-label"></span>
+              <input type="number" style="text-align: center;" placeholder="niños" min="0" ng-model="reserva.ninos"><br>
+            </label>
+            <label class="item item-input">
+              <span class="input-label"></span>
+              <input type="number" style="text-align: center;" placeholder="extranjeros" min="0" ng-model="reserva.extranjeros">
             </label>
             <label class="item item-input">
               <span class="input-label">Ingreso</span>
@@ -41,6 +49,19 @@
               <input type="date">
             </label>
             <br>
+            <ion-toggle toggle-class="toggle-calm" ng-show="{{parques.camping !=0}}">Camping</ion-toggle>
+            <ion-toggle toggle-class="toggle-calm" ng-show="{{parques.alojamiento !=0}}">Alojamiento</ion-toggle>
+
+            <div class="card" ng-show="{{tarifa != undefined}}">
+              <div class="item item-text-wrap">
+                Costo: {{
+                (tarifa.adulto_nacional*reserva.adultos) +
+                (tarifa.nino*reserva.ninos) +
+                (tarifa.extranjero*reserva.extranjeros)
+                | currency : '$ ' : 0
+                }}
+              </div>
+            </div>
             <div class="centered">
               <button class="button button-balanced pull-right redondeado"
               onclick="location.href='#/tab/confirmacion'">
